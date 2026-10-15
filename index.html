@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sophia &amp; Liam — June 19, 2027</title>
+<meta name="description" content="Sophia & Liam are getting married — June 19, 2027, Beaulieu Garden, Napa Valley.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Pinyon+Script&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ivory:#FBF7F0; --blush:#F6E7D8; --blush-deep:#EDD3BC; --champagne:#EAD9B8;
+  --gold:#B8860B; --gold-lt:#D9B96A; --gold-dk:#8C6A1F;
+  --ink:#4A3A2C; --ink-soft:#7A6552; --rose:#B76E5A;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Cormorant Garamond',serif;background:var(--ivory);color:var(--ink);overflow-x:hidden}
+.caps{font-family:'Jost',sans-serif;text-transform:uppercase;letter-spacing:.32em;font-size:11px;font-weight:400}
+.script{font-family:'Pinyon Script',cursive;font-weight:400}
+/* ---------- envelope intro ---------- */
+#intro{position:fixed;inset:0;z-index:100;display:flex;align-items:center;justify-content:center;
+  background:radial-gradient(1200px 800px at 50% 20%,#FDF9F3,var(--blush) 70%,#EBD3BB);transition:opacity .9s,visibility .9s}
+#intro.open{opacity:0;visibility:hidden}
+.env{width:min(340px,84vw);cursor:pointer;text-align:center;animation:floaty 3.4s ease-in-out infinite}
+@keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+.env-flap{width:100%;height:120px;background:linear-gradient(160deg,var(--blush-deep),#E3BFA0);
+  clip-path:polygon(0 0,100% 0,50% 100%);border:1px solid rgba(140,106,31,.35)}
+.env-body{width:100%;height:170px;margin-top:-2px;background:linear-gradient(180deg,#F9EFE3,#F3E2CE);
+  border:1px solid rgba(140,106,31,.35);border-top:none;position:relative;
+  display:flex;align-items:center;justify-content:center}
+.seal{width:92px;height:92px;border-radius:50%;cursor:pointer;position:relative;
+  background:radial-gradient(circle at 35% 30%,#E8C97E,var(--gold) 55%,var(--gold-dk));
+  box-shadow:0 6px 18px rgba(140,106,31,.45),inset 0 2px 6px rgba(255,255,255,.5),inset 0 -4px 8px rgba(90,64,10,.5);
+  display:flex;align-items:center;justify-content:center;animation:pulse 2.2s infinite}
+@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.06)}}
+.seal span{font-family:'Cormorant Garamond',serif;color:#FFF8E7;font-size:26px;letter-spacing:.08em;text-shadow:0 1px 2px rgba(90,64,10,.6)}
+.seal-ring{position:absolute;inset:7px;border:1px solid rgba(255,248,231,.75);border-radius:50%}
+.intro-tap{margin-top:22px;color:var(--ink-soft)}
+/* ---------- top bar ---------- */
+#topbar{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;justify-content:flex-end;gap:10px;padding:14px 16px}
+.chip{font-family:'Jost',sans-serif;font-size:11px;letter-spacing:.18em;border:1px solid rgba(140,106,31,.5);
+  background:rgba(251,247,240,.85);backdrop-filter:blur(6px);color:var(--ink);border-radius:999px;
+  padding:8px 14px;cursor:pointer;transition:.25s}
+.chip:hover{background:var(--gold);color:#fff;border-color:var(--gold)}
+.chip.on{background:var(--gold);color:#fff;border-color:var(--gold)}
+/* ---------- hero ---------- */
+.hero{min-height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  text-align:center;padding:90px 22px 60px;position:relative;overflow:hidden;
+  background:
+    radial-gradient(900px 500px at 50% -80px,rgba(217,185,106,.25),transparent 60%),
+    radial-gradient(700px 500px at 85% 110%,rgba(246,231,216,.9),transparent 60%),
+    var(--ivory)}
+.foil-corner{position:absolute;width:190px;height:190px;opacity:.9;pointer-events:none}
+.fc-tl{top:0;left:0}.fc-tr{top:0;right:0;transform:scaleX(-1)}
+.fc-bl{bottom:0;left:0;transform:scaleY(-1)}.fc-br{bottom:0;right:0;transform:scale(-1)}
+.hero .caps{color:var(--gold-dk);margin-bottom:18px}
+.names{font-size:clamp(58px,13vw,120px);line-height:1.05;color:var(--ink);
+  background:linear-gradient(105deg,#8C6A1F 10%,#D9B96A 35%,#FFF3D6 50%,#D9B96A 65%,#8C6A1F 90%);
+  background-size:220% auto;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
+  animation:shine 7s linear infinite}
+@keyframes shine{to{background-position:220% center}}
+.amp{font-size:.55em;vertical-align:middle}
+.hero-date{margin-top:20px;font-size:clamp(19px,4.5vw,26px);letter-spacing:.14em;color:var(--ink-soft)}
+.hero-venue{margin-top:8px;font-style:italic;font-size:clamp(16px,4vw,20px);color:var(--ink-soft)}
+.gold-rule{width:120px;height:1px;margin:26px auto;background:linear-gradient(90deg,transparent,var(--gold),transparent);position:relative}
+.gold-rule::after{content:"◆";position:absolute;top:-9px;left:50%;transform:translateX(-50%) rotate(45deg);
+  font-size:10px;color:var(--gold);background:var(--ivory);padding:0 6px}
+.count{display:flex;gap:clamp(10px,3vw,26px);margin-top:26px}
+.count div{background:rgba(255,255,255,.65);border:1px solid rgba(184,134,11,.35);border-radius:10px;
+  padding:12px 6px;min-width:70px;box-shadow:0 4px 14px rgba(140,106,31,.12)}
+.count b{display:block;font-size:clamp(24px,6vw,36px);color:var(--gold-dk);font-weight:600}
+.count span{font-family:'Jost',sans-serif;font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--ink-soft)}
+.scroll-hint{margin-top:44px;color:var(--ink-soft);font-size:13px;letter-spacing:.2em;animation:floaty 2.6s ease-in-out infinite}
+/* ---------- sections ---------- */
+section{padding:84px 22px;max-width:760px;margin:0 auto;text-align:center;position:relative}
+.sec-label{color:var(--gold-dk);margin-bottom:14px}
+h2.st{font-size:clamp(34px,8vw,52px);font-weight:500;margin-bottom:8px}
+.lead{font-size:19px;font-style:italic;color:var(--ink-soft);max-width:560px;margin:0 auto;line-height:1.7}
+.divider{width:1px;height:56px;margin:30px auto;background:linear-gradient(var(--gold),transparent)}
+/* story */
+.story p{font-size:19px;line-height:1.85;color:var(--ink);margin-bottom:18px}
+/* schedule */
+.tl{margin-top:34px;text-align:left}
+.tl-item{display:flex;gap:18px;padding:20px 6px;border-bottom:1px solid rgba(184,134,11,.25)}
+.tl-item:last-child{border-bottom:none}
+.tl-time{font-family:'Jost',sans-serif;letter-spacing:.14em;font-size:13px;color:var(--gold-dk);min-width:86px;padding-top:4px}
+.tl-item h3{font-size:23px;font-weight:600;margin-bottom:4px}
+.tl-item p{font-style:italic;color:var(--ink-soft);font-size:17px}
+/* details cards */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:16px;margin-top:34px}
+.card{background:#fff;border:1px solid rgba(184,134,11,.3);border-radius:14px;padding:26px 20px;
+  box-shadow:0 8px 24px rgba(140,106,31,.1)}
+.card .ico{font-size:30px;margin-bottom:10px}
+.card h3{font-size:21px;margin-bottom:8px;color:var(--gold-dk)}
+.card p{font-size:16.5px;line-height:1.65;color:var(--ink-soft);font-style:italic}
+.card a{color:var(--gold-dk)}
+/* rsvp */
+#rsvp{background:linear-gradient(180deg,var(--ivory),var(--blush) 130%);border-top:1px solid rgba(184,134,11,.25);border-bottom:1px solid rgba(184,134,11,.25)}
+form.rsvp{background:#fff;border:1px solid rgba(184,134,11,.4);border-radius:18px;padding:34px 26px;margin-top:30px;
+  box-shadow:0 14px 40px rgba(140,106,31,.16);text-align:left}
+.f-row{margin-bottom:18px}
+.f-row label{display:block;font-family:'Jost',sans-serif;font-size:11px;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--ink-soft);margin-bottom:8px}
+.f-row input,.f-row select,.f-row textarea{width:100%;font-family:'Cormorant Garamond',serif;font-size:18px;
+  padding:12px 14px;border:1px solid rgba(184,134,11,.4);border-radius:10px;background:#FFFDF8;color:var(--ink)}
+.f-row input:focus,.f-row select:focus,.f-row textarea:focus{outline:2px solid var(--gold-lt);border-color:var(--gold)}
+.radio-row{display:flex;gap:10px;flex-wrap:wrap}
+.radio-pill{flex:1;min-width:130px;text-align:center;border:1px solid rgba(184,134,11,.4);border-radius:999px;
+  padding:12px;cursor:pointer;font-size:17px;transition:.2s;background:#FFFDF8}
+.radio-pill.sel{background:var(--gold);color:#fff;border-color:var(--gold)}
+.btn{display:block;width:100%;margin-top:8px;padding:16px;border:none;border-radius:999px;cursor:pointer;
+  font-family:'Jost',sans-serif;letter-spacing:.28em;font-size:13px;text-transform:uppercase;color:#fff;
+  background:linear-gradient(120deg,var(--gold-dk),var(--gold) 50%,var(--gold-dk));background-size:200% auto;transition:.3s}
+.btn:hover{background-position:right center;transform:translateY(-1px)}
+#rsvp-ok{display:none;text-align:center;padding:20px 0}
+#rsvp-ok .big{font-size:54px;margin-bottom:10px}
+.note{font-size:14px;font-style:italic;color:var(--ink-soft);margin-top:14px;text-align:center}
+/* faq */
+.faq{margin-top:26px;text-align:left}
+.faq details{border-bottom:1px solid rgba(184,134,11,.25);padding:16px 4px}
+.faq summary{cursor:pointer;font-size:20px;font-weight:600;list-style:none}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";float:right;color:var(--gold-dk)}
+.faq details[open] summary::after{content:"–"}
+.faq p{margin-top:10px;font-size:17px;font-style:italic;color:var(--ink-soft);line-height:1.7}
+/* footer */
+footer{padding:70px 22px 46px;text-align:center}
+.share-row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin:26px 0}
+.mono{font-size:15px;letter-spacing:.4em;color:var(--gold-dk);margin-top:26px}
+.tiny{font-family:'Jost',sans-serif;font-size:10.5px;letter-spacing:.2em;color:var(--ink-soft);margin-top:14px;text-transform:uppercase}
+@media(max-width:520px){.foil-corner{width:120px;height:120px}.count div{min-width:60px}}
+</style>
+</head>
+<body>
+
+<!-- ENVELOPE INTRO -->
+<div id="intro">
+  <div>
+    <div class="env" id="envTap" role="button" aria-label="Open invitation" tabindex="0">
+      <div class="env-flap"></div>
+      <div class="env-body">
+        <div class="seal"><div class="seal-ring"></div><span>S·L</span></div>
+      </div>
+    </div>
+    <p class="caps intro-tap" data-i18n="tap">Tap the seal to open</p>
+  </div>
+</div>
+
+<!-- TOP BAR -->
+<div id="topbar">
+  <button class="chip" id="langBtn" aria-label="Language">ES</button>
+  <button class="chip" id="musicBtn" aria-label="Music">♪</button>
+</div>
+
+<!-- HERO -->
+<header class="hero">
+  <svg class="foil-corner fc-tl" viewBox="0 0 190 190" fill="none">
+    <defs><linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#8C6A1F"/><stop offset=".5" stop-color="#E9CE8C"/><stop offset="1" stop-color="#B8860B"/></linearGradient></defs>
+    <g stroke="url(#g1)" stroke-width="2" fill="none" stroke-linecap="round">
+      <path d="M8 182 C 8 90, 60 40, 150 22"/><path d="M8 182 C 40 150, 90 130, 182 128" opacity=".7"/>
+      <path d="M30 150 q 18 -6 26 -22 q -20 2 -26 22" fill="url(#g1)" stroke="none" opacity=".8"/>
+      <path d="M60 118 q 20 -2 30 -16 q -20 -4 -30 16" fill="url(#g1)" stroke="none" opacity=".8"/>
+      <path d="M96 84 q 20 2 28 -14 q -20 -6 -28 14" fill="url(#g1)" stroke="none" opacity=".8"/>
+      <circle cx="150" cy="22" r="4" fill="url(#g1)" stroke="none"/><circle cx="182" cy="128" r="4" fill="url(#g1)" stroke="none"/>
+      <path d="M20 120 q 8 -14 24 -18" opacity=".6"/><path d="M44 96 q 10 -12 26 -14" opacity=".6"/>
+    </g>
+  </svg>
+  <svg class="foil-corner fc-tr" viewBox="0 0 190 190" fill="none"><g stroke="url(#g1)" stroke-width="2" fill="none" stroke-linecap="round"><path d="M8 182 C 8 90, 60 40, 150 22"/><path d="M8 182 C 40 150, 90 130, 182 128" opacity=".7"/><path d="M30 150 q 18 -6 26 -22 q -20 2 -26 22" fill="url(#g1)" stroke="none" opacity=".8"/><path d="M60 118 q 20 -2 30 -16 q -20 -4 -30 16" fill="url(#g1)" stroke="none" opacity=".8"/><circle cx="150" cy="22" r="4" fill="url(#g1)" stroke="none"/></g></svg>
+  <svg class="foil-corner fc-bl" viewBox="0 0 190 190" fill="none"><g stroke="url(#g1)" stroke-width="2" fill="none" stroke-linecap="round"><path d="M8 182 C 8 90, 60 40, 150 22"/><path d="M30 150 q 18 -6 26 -22 q -20 2 -26 22" fill="url(#g1)" stroke="none" opacity=".8"/><circle cx="150" cy="22" r="4" fill="url(#g1)" stroke="none"/></g></svg>
+  <svg class="foil-corner fc-br" viewBox="0 0 190 190" fill="none"><g stroke="url(#g1)" stroke-width="2" fill="none" stroke-linecap="round"><path d="M8 182 C 8 90, 60 40, 150 22"/><path d="M8 182 C 40 150, 90 130, 182 128" opacity=".7"/><circle cx="182" cy="128" r="4" fill="url(#g1)" stroke="none"/></g></svg>
+
+  <p class="caps" data-i18n="kicker">Together with their families</p>
+  <h1 class="names script">Sophia <span class="amp">&amp;</span> Liam</h1>
+  <div class="gold-rule"></div>
+  <p class="hero-date caps" data-i18n="date">Saturday · June 19, 2027</p>
+  <p class="hero-venue" data-i18n="venue">Beaulieu Garden, Napa Valley, California</p>
+  <div class="count" id="count">
+    <div><b id="cd-d">0</b><span data-i18n="days">Days</span></div>
+    <div><b id="cd-h">0</b><span data-i18n="hours">Hours</span></div>
+    <div><b id="cd-m">0</b><span data-i18n="mins">Minutes</span></div>
+    <div><b id="cd-s">0</b><span data-i18n="secs">Seconds</span></div>
+  </div>
+  <p class="caps scroll-hint" data-i18n="scroll">Scroll</p>
+</header>
+
+<!-- STORY -->
+<section class="story">
+  <p class="caps sec-label" data-i18n="s1k">Our Story</p>
+  <h2 class="st script" data-i18n="s1t">How we met</h2>
+  <div class="divider"></div>
+  <p data-i18n="s1p1">It was a rainy October evening in San Francisco, and Sophia had ducked into a tiny bookstore to wait out the storm. Liam was already there, reaching for the very same poetry collection. They argued — politely — over who saw it first, and ended up sharing coffee instead of the book.</p>
+  <p data-i18n="s1p2">Six years, three cities, and one very spoiled golden retriever later, he proposed in that same bookstore, down on one knee between the poetry shelves. She said yes before he finished the question.</p>
+</section>
+
+<!-- SCHEDULE -->
+<section>
+  <p class="caps sec-label" data-i18n="s2k">Order of the Day</p>
+  <h2 class="st script" data-i18n="s2t">Schedule</h2>
+  <div class="divider"></div>
+  <div class="tl">
+    <div class="tl-item"><div class="tl-time">4:00 PM</div><div><h3 data-i18n="e1t">The Ceremony</h3><p data-i18n="e1d">Vows beneath the garden pergola, strung with lights and roses.</p></div></div>
+    <div class="tl-item"><div class="tl-time">5:00 PM</div><div><h3 data-i18n="e2t">Cocktail Hour</h3><p data-i18n="e2d">Champagne and canapés on the terrace as the sun sets over the vines.</p></div></div>
+    <div class="tl-item"><div class="tl-time">6:30 PM</div><div><h3 data-i18n="e3t">The Reception</h3><p data-i18n="e3d">Dinner, toasts, and dancing in the glass pavilion.</p></div></div>
+    <div class="tl-item"><div class="tl-time">10:00 PM</div><div><h3 data-i18n="e4t">Sparkler Send-off</h3><p data-i18n="e4d">We slip away under a shower of golden sparks.</p></div></div>
+  </div>
+</section>
+
+<!-- DETAILS -->
+<section>
+  <p class="caps sec-label" data-i18n="s3k">Good to Know</p>
+  <h2 class="st script" data-i18n="s3t">Details</h2>
+  <div class="divider"></div>
+  <div class="cards">
+    <div class="card"><div class="ico">📍</div><h3 data-i18n="d1t">Venue</h3><p><span data-i18n="d1d">Beaulieu Garden, 1960 St Helena Hwy, Rutherford, CA.</span><br><a href="https://maps.google.com/?q=Beaulieu+Garden+Rutherford+CA" target="_blank" rel="noopener" data-i18n="map">View map →</a></p></div>
+    <div class="card"><div class="ico">🤵</div><h3 data-i18n="d2t">Dress Code</h3><p data-i18n="d2d">Black tie. Floor-length gowns and tuxedos; gold accents welcome.</p></div>
+    <div class="card"><div class="ico">🛏️</div><h3 data-i18n="d3t">Stay</h3><p data-i18n="d3d">Rooms held at the Rutherford Hill Inn until May 1 — mention "Sophia & Liam".</p></div>
+    <div class="card"><div class="ico">🎁</div><h3 data-i18n="d4t">Gifts</h3><p data-i18n="d4d">Your presence is the present. Should you wish, a wishing well will be at the reception.</p></div>
+  </div>
+</section>
+
+<!-- RSVP -->
+<section id="rsvp">
+  <p class="caps sec-label" data-i18n="s4k">Répondez S'il Vous Plaît</p>
+  <h2 class="st script" data-i18n="s4t">Will you join us?</h2>
+  <p class="lead" data-i18n="s4d">Kindly reply by May 1, 2027</p>
+  <form class="rsvp" id="rsvpForm" novalidate>
+    <div id="rsvp-fields">
+      <div class="f-row"><label data-i18n="fName">Full name</label><input id="f-name" required autocomplete="name" data-i18n-ph="fNamePh" placeholder="Your name"></div>
+      <div class="f-row"><label data-i18n="fEmail">Email</label><input id="f-email" type="email" autocomplete="email" data-i18n-ph="fEmailPh" placeholder="you@example.com"></div>
+      <div class="f-row"><label data-i18n="fAttend">Will you attend?</label>
+        <div class="radio-row">
+          <div class="radio-pill sel" data-v="Joyfully accepts" data-i18n="yes">Joyfully accepts</div>
+          <div class="radio-pill" data-v="Regretfully declines" data-i18n="no">Regretfully declines</div>
+        </div>
+      </div>
+      <div class="f-row"><label data-i18n="fGuests">Guests (incl. you)</label>
+        <select id="f-guests"><option>1</option><option>2</option><option>3</option><option>4</option></select></div>
+      <div class="f-row"><label data-i18n="fMeal">Meal preference</label>
+        <select id="f-meal"><option data-i18n="m1">Chicken</option><option data-i18n="m2">Fish</option><option data-i18n="m3">Vegetarian</option><option data-i18n="m4">Vegan</option></select></div>
+      <div class="f-row"><label data-i18n="fMsg">Message / dietary needs</label><textarea id="f-msg" rows="3" data-i18n-ph="fMsgPh" placeholder="Anything we should know?"></textarea></div>
+      <button class="btn" type="submit" data-i18n="send">Send RSVP</button>
+      <p class="note" data-i18n="privacy">Your reply goes straight to Sophia &amp; Liam.</p>
+    </div>
+    <div id="rsvp-ok">
+      <div class="big">💛</div>
+      <h3 class="script" style="font-size:38px" data-i18n="thanks">Thank you!</h3>
+      <p class="lead" data-i18n="thanksD">Your reply has been received. We can't wait to celebrate with you.</p>
+    </div>
+  </form>
+</section>
+
+<!-- FAQ -->
+<section>
+  <p class="caps sec-label">FAQ</p>
+  <h2 class="st script" data-i18n="s5t">Questions</h2>
+  <div class="divider"></div>
+  <div class="faq">
+    <details><summary data-i18n="q1">Can I bring a plus-one?</summary><p data-i18n="a1">Plus-ones are noted on your invitation. If unsure, just ask us — we will happily confirm.</p></details>
+    <details><summary data-i18n="q2">Are children welcome?</summary><p data-i18n="a2">We love your little ones, but the reception is adults-only. Thank you for understanding.</p></details>
+    <details><summary data-i18n="q3">Is parking available?</summary><p data-i18n="a3">Yes — complimentary valet at the garden gate from 3:30 PM.</p></details>
+  </div>
+</section>
+
+<footer>
+  <div class="gold-rule"></div>
+  <p class="caps" data-i18n="foot">We can't wait to celebrate with you</p>
+  <div class="share-row">
+    <button class="chip" id="waShare">WhatsApp ↗</button>
+    <button class="chip" id="calBtn" data-i18n="cal">Add to Calendar</button>
+  </div>
+  <p class="mono">S · L</p>
+  <p class="tiny">Sophia &amp; Liam — 19 · 06 · 2027</p>
+</footer>
+<script>
+/* ============ CONFIG — couple pastes their Apps Script URL here ============ */
+const CONFIG = {
+  RSVP_ENDPOINT: "", // e.g. "https://script.google.com/macros/s/XXXX/exec" — empty = save in this browser only
+  EVENT_DATE: new Date("2027-06-19T16:00:00-07:00")
+};
+/* ================= i18n ================= */
+const I18N = {
+en:{tap:"Tap the seal to open",kicker:"Together with their families",date:"Saturday · June 19, 2027",venue:"Beaulieu Garden, Napa Valley, California",days:"Days",hours:"Hours",mins:"Minutes",secs:"Seconds",scroll:"Scroll",
+s1k:"Our Story",s1t:"How we met",s1p1:"It was a rainy October evening in San Francisco, and Sophia had ducked into a tiny bookstore to wait out the storm. Liam was already there, reaching for the very same poetry collection. They argued — politely — over who saw it first, and ended up sharing coffee instead of the book.",s1p2:"Six years, three cities, and one very spoiled golden retriever later, he proposed in that same bookstore, down on one knee between the poetry shelves. She said yes before he finished the question.",
+s2k:"Order of the Day",s2t:"Schedule",e1t:"The Ceremony",e1d:"Vows beneath the garden pergola, strung with lights and roses.",e2t:"Cocktail Hour",e2d:"Champagne and canapés on the terrace as the sun sets over the vines.",e3t:"The Reception",e3d:"Dinner, toasts, and dancing in the glass pavilion.",e4t:"Sparkler Send-off",e4d:"We slip away under a shower of golden sparks.",
+s3k:"Good to Know",s3t:"Details",d1t:"Venue",d1d:"Beaulieu Garden, 1960 St Helena Hwy, Rutherford, CA.",map:"View map →",d2t:"Dress Code",d2d:"Black tie. Floor-length gowns and tuxedos; gold accents welcome.",d3t:"Stay",d3d:'Rooms held at the Rutherford Hill Inn until May 1 — mention "Sophia & Liam".',d4t:"Gifts",d4d:"Your presence is the present. Should you wish, a wishing well will be at the reception.",
+s4k:"Répondez S'il Vous Plaît",s4t:"Will you join us?",s4d:"Kindly reply by May 1, 2027",
+fName:"Full name",fNamePh:"Your name",fEmail:"Email",fEmailPh:"you@example.com",fAttend:"Will you attend?",yes:"Joyfully accepts",no:"Regretfully declines",fGuests:"Guests (incl. you)",fMeal:"Meal preference",m1:"Chicken",m2:"Fish",m3:"Vegetarian",m4:"Vegan",fMsg:"Message / dietary needs",fMsgPh:"Anything we should know?",send:"Send RSVP",privacy:"Your reply goes straight to Sophia & Liam.",thanks:"Thank you!",thanksD:"Your reply has been received. We can't wait to celebrate with you.",
+s5t:"Questions",q1:"Can I bring a plus-one?",a1:"Plus-ones are noted on your invitation. If unsure, just ask us — we will happily confirm.",q2:"Are children welcome?",a2:"We love your little ones, but the reception is adults-only. Thank you for understanding.",q3:"Is parking available?",a3:"Yes — complimentary valet at the garden gate from 3:30 PM.",
+foot:"We can't wait to celebrate with you",cal:"Add to Calendar",needName:"Please add your name first."},
+es:{tap:"Toca el sello para abrir",kicker:"Junto a sus familias",date:"Sábado · 19 de junio de 2027",venue:"Beaulieu Garden, Napa Valley, California",days:"Días",hours:"Horas",mins:"Minutos",secs:"Segundos",scroll:"Desliza",
+s1k:"Nuestra Historia",s1t:"Cómo nos conocimos",s1p1:"Era una lluviosa tarde de octubre en San Francisco, y Sophia se refugió en una pequeña librería para esperar que pasara la tormenta. Liam ya estaba allí, alcanzando la misma colección de poesía. Discutieron — amablemente — sobre quién la vio primero, y terminaron compartiendo un café en lugar del libro.",s1p2:"Seis años, tres ciudades y un golden retriever muy mimado después, él le propuso matrimonio en esa misma librería, de rodillas entre los estantes de poesía. Ella dijo que sí antes de que terminara la pregunta.",
+s2k:"Orden del Día",s2t:"Programa",e1t:"La Ceremonia",e1d:"Votos bajo la pérgola del jardín, adornada con luces y rosas.",e2t:"Hora del Cóctel",e2d:"Champán y canapés en la terraza mientras el sol se pone sobre los viñedos.",e3t:"La Recepción",e3d:"Cena, brindis y baile en el pabellón de cristal.",e4t:"Despedida con Bengalas",e4d:"Nos escapamos bajo una lluvia de chispas doradas.",
+s3k:"Conviene Saber",s3t:"Detalles",d1t:"Lugar",d1d:"Beaulieu Garden, 1960 St Helena Hwy, Rutherford, CA.",map:"Ver mapa →",d2t:"Código de Vestimenta",d2d:"Etiqueta. Vestidos largos y esmoquin; toques dorados bienvenidos.",d3t:"Hospedaje",d3d:'Habitaciones reservadas en Rutherford Hill Inn hasta el 1 de mayo — menciona "Sophia & Liam".',d4t:"Regalos",d4d:"Tu presencia es el regalo. Si lo deseas, habrá un pozo de deseos en la recepción.",
+s4k:"Répondez S'il Vous Plaît",s4t:"¿Nos acompañas?",s4d:"Confirma antes del 1 de mayo de 2027",
+fName:"Nombre completo",fNamePh:"Tu nombre",fEmail:"Correo",fEmailPh:"tu@ejemplo.com",fAttend:"¿Asistirás?",yes:"Acepta con alegría",no:"Declina con pesar",fGuests:"Invitados (incl. tú)",fMeal:"Preferencia de menú",m1:"Pollo",m2:"Pescado",m3:"Vegetariano",m4:"Vegano",fMsg:"Mensaje / dieta especial",fMsgPh:"¿Algo que debamos saber?",send:"Enviar RSVP",privacy:"Tu respuesta llega directo a Sophia y Liam.",thanks:"¡Gracias!",thanksD:"Hemos recibido tu respuesta. ¡Qué ganas de celebrar contigo!",
+s5t:"Preguntas",q1:"¿Puedo llevar acompañante?",a1:"Los acompañantes están indicados en tu invitación. Si dudas, pregúntanos — te confirmamos encantados.",q2:"¿Los niños son bienvenidos?",a2:"Adoramos a tus pequeños, pero la recepción es solo para adultos. Gracias por entenderlo.",q3:"¿Hay aparcamiento?",a3:"Sí — valet gratuito en la puerta del jardín desde las 3:30 PM.",
+foot:"Qué ganas de celebrar contigo",cal:"Añadir al Calendario",needName:"Añade tu nombre primero."}
+};
+let lang = "en";
+const $ = s => document.querySelector(s), $$ = s => [...document.querySelectorAll(s)];
+function applyLang(){
+  const d = I18N[lang];
+  $$("[data-i18n]").forEach(el=>{ const k=el.dataset.i18n; if(d[k]!==undefined) el.innerHTML=d[k]; });
+  $$("[data-i18n-ph]").forEach(el=>{ const k=el.dataset.i18nPh; if(d[k]!==undefined) el.placeholder=d[k]; });
+  $$(".radio-pill").forEach(p=>{ p.textContent = p.dataset.v==="Joyfully accepts" ? d.yes : d.no; });
+  $("#langBtn").textContent = lang==="en" ? "ES" : "EN";
+  document.documentElement.lang = lang;
+}
+$("#langBtn").onclick = ()=>{ lang = lang==="en"?"es":"en"; applyLang(); };
+
+/* countdown */
+function tick(){
+  let diff = CONFIG.EVENT_DATE - new Date(); if(diff<0) diff=0;
+  $("#cd-d").textContent = Math.floor(diff/864e5);
+  $("#cd-h").textContent = String(Math.floor(diff/36e5)%24).padStart(2,"0");
+  $("#cd-m").textContent = String(Math.floor(diff/6e4)%60).padStart(2,"0");
+  $("#cd-s").textContent = String(Math.floor(diff/1e3)%60).padStart(2,"0");
+}
+setInterval(tick,1000); tick();
+
+/* envelope */
+const intro = $("#intro");
+function openIntro(){ intro.classList.add("open"); musicStart(); }
+$("#envTap").addEventListener("click", openIntro);
+$("#envTap").addEventListener("keydown", e=>{ if(e.key==="Enter"||e.key===" "){e.preventDefault();openIntro();} });
+
+/* music — soft golden pad */
+let AC=null, musicOn=false, padTimer=null, ci=0;
+const CHORDS=[[174.61,220,261.63],[146.83,196,246.94],[130.81,174.61,220],[146.83,174.61,293.66]];
+function playChord(){
+  if(!musicOn||!AC) return;
+  const t=AC.currentTime;
+  CHORDS[ci%4].forEach(f=>{
+    const o=AC.createOscillator(),g=AC.createGain();
+    o.type="sine"; o.frequency.value=f;
+    g.gain.setValueAtTime(0.0001,t); g.gain.linearRampToValueAtTime(.05,t+2.5);
+    g.gain.linearRampToValueAtTime(.0001,t+7.5);
+    o.connect(g); g.connect(AC.destination); o.start(t); o.stop(t+8);
+  });
+  ci++; padTimer=setTimeout(playChord,6000);
+}
+function musicStart(){
+  try{
+    AC = AC || new (window.AudioContext||window.webkitAudioContext)();
+    AC.resume();
+    if(musicOn) return;
+    musicOn=true; $("#musicBtn").classList.add("on"); playChord();
+  }catch(e){}
+}
+function musicStop(){
+  musicOn=false; $("#musicBtn").classList.remove("on");
+  clearTimeout(padTimer); if(AC) AC.suspend();
+}
+$("#musicBtn").onclick=()=>{ musicOn ? musicStop() : musicStart(); };
+
+/* rsvp */
+let attending="Joyfully accepts";
+$$(".radio-pill").forEach(p=>p.onclick=()=>{
+  $$(".radio-pill").forEach(x=>x.classList.remove("sel")); p.classList.add("sel");
+  attending=p.dataset.v;
+});
+$("#rsvpForm").addEventListener("submit", async e=>{
+  e.preventDefault();
+  const d=I18N[lang];
+  const name=$("#f-name").value.trim();
+  if(!name){ alert(d.needName); $("#f-name").focus(); return; }
+  const payload={ name, email:$("#f-email").value.trim(), attending,
+    guests:$("#f-guests").value, meal:$("#f-meal").value,
+    message:$("#f-msg").value.trim(), lang, ts:new Date().toISOString() };
+  // 1) always keep a local copy
+  try{ const k="gold-rsvp"; const a=JSON.parse(localStorage.getItem(k)||"[]"); a.push(payload); localStorage.setItem(k,JSON.stringify(a)); }catch(err){}
+  // 2) send to couple's sheet endpoint if configured
+  if(CONFIG.RSVP_ENDPOINT){
+    try{ await fetch(CONFIG.RSVP_ENDPOINT,{method:"POST",mode:"no-cors",
+      headers:{"Content-Type":"text/plain"},body:JSON.stringify(payload)}); }catch(err){}
+  }
+  $("#rsvp-fields").style.display="none"; $("#rsvp-ok").style.display="block";
+  $("#rsvp-ok").scrollIntoView({behavior:"smooth",block:"center"});
+});
+
+/* share + calendar */
+const shareText=()=>encodeURIComponent(lang==="es"
+  ? "¡Nos casamos! Sophia & Liam — 19 de junio de 2027, Napa Valley. Mira la invitación: "
+  : "We're getting married! Sophia & Liam — June 19, 2027, Napa Valley. See the invitation: ");
+$("#waShare").onclick=()=>window.open("https://wa.me/?text="+shareText()+encodeURIComponent(location.href),"_blank");
+$("#calBtn").onclick=()=>{
+  const u="https://calendar.google.com/calendar/render?action=TEMPLATE&text="+encodeURIComponent("Sophia & Liam — Wedding")
+    +"&dates=20270619T230000Z/20270620T050000Z&details="+encodeURIComponent("Beaulieu Garden, Napa Valley")
+    +"&location="+encodeURIComponent("Beaulieu Garden, Rutherford, CA");
+  window.open(u,"_blank");
+};
+applyLang();
+</script>
+</body>
+</html>
